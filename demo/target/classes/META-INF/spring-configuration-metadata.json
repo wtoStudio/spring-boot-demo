@@ -1,0 +1,58 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "demo.config.AppConfig",
+      "sourceMethod": "dataSource()"
+    },
+    {
+      "name": "user",
+      "type": "demo.entity.User",
+      "sourceType": "demo.entity.User"
+    }
+  ],
+  "properties": [
+    {
+      "name": "user.article",
+      "type": "java.util.List<demo.entity.Article>",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.birthday",
+      "type": "java.util.Date",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.create-time",
+      "type": "java.lang.Long",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.id",
+      "type": "java.lang.Long",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.name",
+      "type": "java.lang.String",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.password",
+      "type": "java.lang.String",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.state",
+      "type": "java.lang.Integer",
+      "sourceType": "demo.entity.User"
+    },
+    {
+      "name": "user.update-time",
+      "type": "java.lang.Long",
+      "sourceType": "demo.entity.User"
+    }
+  ],
+  "hints": []
+}

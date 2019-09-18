@@ -1,0 +1,49 @@
+app:
+  name: 测试DEMO
+
+server:
+  port: 8089
+
+spring:
+  thymeleaf:
+    cache: false #禁用thymeleaf的缓存
+  messages:
+    basename: i18n.login
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8
+    #tomcat:
+      #max-active: 2
+    type: com.alibaba.druid.pool.DruidDataSource #自定义配置数据源
+#    schema:
+#      - classpath: schema.sql
+    maxActive: 6
+    initialSize: 1
+    maxWait: 20000
+    minIdle: 3
+    timeBetweenEvictionRunsMillis: 20000
+    minEvictableIdleTimeMillis: 20000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 10
+    asyncInit: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+
+
+logging:
+  level:
+    demo: trace
+  file:
+    log.txt

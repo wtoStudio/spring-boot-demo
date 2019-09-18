@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>success</title>
+</head>
+<body>
+
+    <form action="/demo/exit">
+        <input type="submit" value="退出登录">
+    </form>
+
+    <h2>success</h2>
+
+    <h3 th:text="${user.name}"></h3>
+    <h3 th:utext="${user.password}"></h3>
+
+    <ul>
+        <li th:each="article : ${articles}"> [[${article.title}]] - [[${article.content}]] </li>
+    </ul>
+</body>
+</html>
